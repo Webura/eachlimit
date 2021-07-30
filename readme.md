@@ -6,7 +6,7 @@ Based on [caolan/async](https://caolan.github.io/async/v3/docs.html#eachLimit) b
 `npm install @webura/eachlimit`
 # Example
 
-    import eachLimit from "./eachlimit";
+    import eachLimit from '@webura/eachlimit';
     const list = [1,2,3,4,5,6,7,8,9,10];
 
     async processMyListFiveAtTime(){
