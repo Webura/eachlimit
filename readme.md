@@ -1,6 +1,6 @@
 # eachLimit
 Throttled parallell async calls.
-Based on [caolan/async](https://caolan.github.io/async/v3/docs.html#eachLimit) but for TypeScript and with added features.
+Inspired by [caolan/async](https://caolan.github.io/async/v3/docs.html#eachLimit) but for TypeScript and with added features.
 
 # Install
 `npm install @webura/eachlimit`
