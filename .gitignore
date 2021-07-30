@@ -1,6 +1,5 @@
 .DS_Store
 /other/
 /.vscode/
-/dist/
 node_modules/
 tsconfig.tsbuildinfo
