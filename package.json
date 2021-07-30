@@ -1,0 +1,13 @@
+{
+  "name": "eachlimit",
+  "version": "0.0.1",
+  "description": "Throttled parallell async calls",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "node dist/test"
+  },
+  "author": "Johnny Tsang",
+  "license": "unlicense"
+}
