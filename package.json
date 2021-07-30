@@ -1,5 +1,5 @@
 {
-  "name": "eachlimit",
+  "name": "@webura/eachlimit",
   "version": "0.0.1",
   "description": "Throttled parallell async calls",
   "main": "dist/index.js",

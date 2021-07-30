@@ -2,7 +2,10 @@
 Throttled parallell async calls.
 Based on [caolan/async](https://caolan.github.io/async/v3/docs.html#eachLimit) but for TypeScript and with added features.
 
+# Install
+`npm install @webura/eachlimit`
 # Example
+
     import eachLimit from "./eachlimit";
     const list = [1,2,3,4,5,6,7,8,9,10];
 
