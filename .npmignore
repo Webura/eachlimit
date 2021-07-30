@@ -1,0 +1,5 @@
+.DS_Store
+/other/
+/.vscode/
+node_modules/
+tsconfig.tsbuildinfo
