@@ -1,4 +1,4 @@
-import eachLimit from ".";
+import eachLimit from "./eachlimit";
 
 async function waitAndPrint(ms: number, text: any) {
   return new Promise(resolve => {
