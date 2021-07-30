@@ -1,6 +1,9 @@
 # eachLimit
-Throttled parallell async calls.
+Throttled parallell async calls. 
+Typical use case for eachLimit is web-scraping or API-calls. 
+
 Inspired by [caolan/async](https://caolan.github.io/async/v3/docs.html#eachLimit) but for TypeScript and with added features.
+
 
 # Install
 ```shell
@@ -21,11 +24,20 @@ processMyListFiveAtTime();
 ```
 See [test.ts](https://github.com/Webura/eachlimit/blob/main/src/test.ts) for more examples
 
-# Features
-Typical use case for eachLimit is web-scraping or API-calls. 
+# Options
 There is a fourth argument `delay` specified in milliseconds, defaulted to `0`.
 This will delay the initial calls to ease the digestion.
 
+**Example:**
+```typescript
+await eachLimit(list, 5, async item=> await remoteApiCall(item), {delay: 100});
+```
+
+**Alternative:**
+```typescript
+eachLimit.setOptions({ delay: 100 }); // Sets globally
+await eachLimit(list, 5, async item=> await remoteApiCall(item));
+```
 
 # Testing
 ```shell

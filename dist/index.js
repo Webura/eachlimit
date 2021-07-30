@@ -1,35 +1,13 @@
 "use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-function eachLimit(array, limit, run, delay = 0) {
-    array = array.concat([]);
-    const length = array.length;
-    const results = new Array(length);
-    return new Promise(resolveAll => {
-        let runningJobs = 0;
-        let nextItem = 0;
-        function next() {
-            if (nextItem < length && runningJobs < limit) {
-                runningJobs++;
-                const currentIndex = nextItem;
-                run(array[nextItem], nextItem).then(result => {
-                    results[currentIndex] = result;
-                    runningJobs--;
-                    if (nextItem == length && runningJobs == 0)
-                        resolveAll(results);
-                    else
-                        next();
-                });
-                nextItem++;
-            }
-        }
-        if (length == 0) {
-            resolveAll(results);
-        }
-        else {
-            for (let i = 0; i < limit && i < length; i++) {
-                setTimeout(next, i * delay);
-            }
-        }
-    });
-}
-exports.default = eachLimit;
+__exportStar(require("./eachlimit"), exports);

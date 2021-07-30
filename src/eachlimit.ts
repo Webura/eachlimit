@@ -1,4 +1,13 @@
-function eachLimit<T, K>(array: Array<T>, limit: number, run: (item: T, i: number) => Promise<K>, delay = 0): Promise<K[]> {
+export interface EachLimitOptions {
+  delay?: number;
+}
+
+const _options = {
+  delay: 0,
+};
+
+function eachLimit<T, K>(array: Array<T>, limit: number, run: (item: T, i: number) => Promise<K>, options?: EachLimitOptions): Promise<K[]> {
+  const delay = options?.delay ? options.delay : _options.delay;
   array = array.concat([]);
   const length = array.length;
   const results: K[] = new Array(length);
@@ -28,6 +37,11 @@ function eachLimit<T, K>(array: Array<T>, limit: number, run: (item: T, i: numbe
       }
     }
   });
+}
+
+eachLimit.setOptions = function (options: EachLimitOptions) {
+  if (options.delay !== undefined)
+    _options.delay = options.delay;
 }
 
 export default eachLimit;

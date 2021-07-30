@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const _1 = require(".");
+const eachlimit_1 = require("./eachlimit");
+eachlimit_1.default.setOptions({ delay: 1000 });
 async function waitAndPrint(ms, text) {
     return new Promise(resolve => {
         setTimeout(function () {
@@ -10,8 +11,8 @@ async function waitAndPrint(ms, text) {
     });
 }
 async function test() {
-    let result = await _1.default([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3, async (item) => {
-        await waitAndPrint(1000, item);
+    let result = await eachlimit_1.default([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5, async (item) => {
+        await waitAndPrint(3000, item);
         return 'Item:' + item;
     });
     console.log(result);

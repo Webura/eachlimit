@@ -1,2 +1,1 @@
-import eachLimit from './eachlimit';
-export default eachLimit;
+export * from './eachlimit';
