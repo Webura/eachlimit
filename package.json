@@ -1,8 +1,8 @@
 {
   "name": "@webura/eachlimit",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Throttled parallell async calls",
-  "main": "dist/index.js",
+  "main": "dist/index",
   "types": "dist/index.d.ts",
   "repository": {
     "url": "https://github.com/Webura/eachlimit"

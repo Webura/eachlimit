@@ -1,4 +1,4 @@
-import eachLimit from "./eachlimit";
+import eachLimit from "./index";
 
 eachLimit.setOptions({ delay: 1000 });
 
