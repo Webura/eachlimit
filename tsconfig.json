@@ -6,7 +6,4 @@
     "declaration": true,
     "strict": true,
   },
-  "include": [
-    "src"
-  ],
 }
