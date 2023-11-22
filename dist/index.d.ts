@@ -6,3 +6,4 @@ declare namespace eachLimit {
     var setOptions: (options: EachLimitOptions) => void;
 }
 export default eachLimit;
+//# sourceMappingURL=index.d.ts.map

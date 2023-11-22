@@ -1,6 +1,6 @@
-import eachLimit from "./index";
+import eachLimit from "./index.js";
 
-eachLimit.setOptions({ delay: 1000 });
+eachLimit.setOptions({ delay: 100 });
 
 async function waitAndPrint(ms: number, text: any) {
   return new Promise(resolve => {
@@ -13,7 +13,7 @@ async function waitAndPrint(ms: number, text: any) {
 
 async function test() {
   let result = await eachLimit([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5, async item => {
-    await waitAndPrint(3000, item)
+    await waitAndPrint(3000, item);
     return 'Item:' + item;
   });
   console.log(result);

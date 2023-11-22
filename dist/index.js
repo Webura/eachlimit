@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 const _options = {
     delay: 0,
 };
@@ -40,4 +38,5 @@ eachLimit.setOptions = function (options) {
     if (options.delay !== undefined)
         _options.delay = options.delay;
 };
-exports.default = eachLimit;
+export default eachLimit;
+//# sourceMappingURL=index.js.map

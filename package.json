@@ -2,11 +2,16 @@
   "name": "@webura/eachlimit",
   "version": "1.0.7",
   "description": "Throttled parallell async calls",
+  "type": "module",
   "main": "dist/index",
   "types": "dist/index.d.ts",
+  "sideEffects": false,
   "repository": {
     "url": "https://github.com/Webura/eachlimit"
   },
+  "files": [
+    "./dist/"
+  ],
   "private": false,
   "keywords": [
     "eachlimit",
@@ -14,7 +19,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "test": "node dist/test"
+    "test": "node --enable-source-maps dist/test"
   },
   "author": "Johnny Tsang",
   "license": "unlicense"
