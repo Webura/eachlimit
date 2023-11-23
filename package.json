@@ -7,7 +7,7 @@
   "types": "dist/index.d.ts",
   "sideEffects": false,
   "repository": {
-    "url": "https://github.com/Webura/eachlimit"
+    "url": "git+https://github.com/Webura/eachlimit.git"
   },
   "files": [
     "./dist/"
